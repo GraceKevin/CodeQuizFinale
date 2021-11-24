@@ -25,21 +25,54 @@ var buttonD = document.getElementById("d");
 // Quiz questions object array
 var quizQuestions = [
     {
-        question: "Placeholder question?",
-        choiceA: "this is a test of your emergency",
-        choiceB: "B",
-        choiceC: "C",
-        choiceD: "D",
+        question: "How do you write a hidden comment in Javascript?",
+        choiceA: '!-- --!',
+        choiceB: "/**/",
+        choiceC: "//",
+        choiceD: "You do not comment out JS",
         correctAnswer: "c"
     },
     {
-        question: "Duplicate question?",
-        choiceA: "A",
-        choiceB: "B",
-        choiceC: "C",
+        question: "What does an Array do?",
+        choiceA: "Holds multiple values into a single variable",
+        choiceB: "Assigns Value to var",
+        choiceC: "Never use Arrays",
         choiceD: "D",
+        correctAnswer: "a"
+    },
+    {
+        question: "How do you write a hidden comment in Javascript?",
+        choiceA: '!-- --!',
+        choiceB: "/**/",
+        choiceC: "//",
+        choiceD: "You do not comment out JS",
         correctAnswer: "c"
-    }
+    },
+    {
+        question: "In HTML what is the proper tag name for adding images?",
+        choiceA: "pic",
+        choiceB: "img",
+        choiceC: "jpeg",
+        choiceD: "png",
+        correctAnswer: "b"
+    },    
+    {
+        question: "What does border-radius do?",
+        choiceA: 'Increases the width of the border',
+        choiceB: "Rounds the corners of the border",
+        choiceC: "Creates a shadow",
+        choiceD: "Connects to nearby borders",
+        correctAnswer: "b"
+    },
+    {
+        question: "What does DOM stand for?",
+        choiceA: "Document Object Model",
+        choiceB: "Family",
+        choiceC: "Desktop Originated Material",
+        choiceD: "Dominated Oni Masks",
+        correctAnswer: "a"
+    },
+    
 ];
 
 var finalQuestionIndex = quizQuestions.length;

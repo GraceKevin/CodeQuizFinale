@@ -64,3 +64,29 @@ body {
 .score li {
     list-style: none;
 }
+
+#a,
+#b,
+#c,
+#d,
+#start-btn,
+#saveScore,
+#restart {
+    color: white;
+    background-color: purple;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#a:hover,
+#b:hover,
+#c:hover,
+#d:hover,
+#start-btn:hover,
+#saveScore:hover,
+#restart:hover{
+    color: white;
+    background-color: mediumorchid;
+}
