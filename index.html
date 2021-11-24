@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KG Code Quiz</title>
 </head>
 <body>
-    
+    <div id="start-page" class="start-page">
+        <h2>This quiz will test your coding knowledge!</h2>
+        <button>Start Quiz</button>
+     </div>
+ 
+     <!-- Quiz Container -->
+
+     <div class="quiz-start" id="quiz-start">
+         <header>
+             <div class="timer" id="timer">
+                 <div id="timer-text" class="timer-text">Remaining Time</div>
+                 <div id="timer-sec" class="timer-sec"></div>
+             </div>
+         </header>
+         <section>
+         <div class="questions" id="questions">
+
+             <!-- Questions space from Javascript -->
+
+         </div>
+         <div class="answers" id="answers">
+
+             <!-- Answers from Javascript -->
+
+         </div>
+         </section>
+         <div>
+             <div class="question-count" id="question-count">
+
+             <!-- insert question count from Javascript -->
+
+             </div>
+             <button id="next-btn btn" class="next-btn btn">Next</button>
+            </div>
+     </div>
+ 
+     <!-- Quiz results box -->
+
+     <div class="results-box" id="results-box">
+         <div class="completed" id="completed"> Completed</div>
+         <div class="score" id="score">
+
+             <!-- insert score result from Javascript -->
+             
+         </div>
+         <div class="buttons" id="buttons">
+             <button class="restart" id="restart">Restart</button>
+             <button class="quit" id="quit">Exit</button>
+         </div>
+     </div>
+ 
+     <script src="./assets/script.js"></script>
 </body>
 </html>
