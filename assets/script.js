@@ -115,12 +115,14 @@ saveScore.addEventListener("click", function highscore(){
     if(username.value === "") {
         alert("Please insert your name to save your score!");
         return false;
-    }else{
+    }
+    else{
         var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
-        var currentUser = username.value.trim();
+        var currentUser = username.value;
         var currentHighscore = {
-            name: currentUser,
-            score: score
+            // adjust handling
+            currentUser,
+            score
         };
         // console.log("is this thing on");
         savedHighscores.push(currentHighscore);
