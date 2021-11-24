@@ -41,12 +41,12 @@ var quizQuestions = [
         correctAnswer: "a"
     },
     {
-        question: "How do you write a hidden comment in Javascript?",
-        choiceA: '!-- --!',
-        choiceB: "/**/",
-        choiceC: "//",
-        choiceD: "You do not comment out JS",
-        correctAnswer: "c"
+        question: "What HTML attribute references an external JavaScript file?",
+        choiceA: 'src',
+        choiceB: "href",
+        choiceC: "index",
+        choiceD: "class",
+        correctAnswer: "a"
     },
     {
         question: "In HTML what is the proper tag name for adding images?",
@@ -67,7 +67,7 @@ var quizQuestions = [
     {
         question: "What does DOM stand for?",
         choiceA: "Document Object Model",
-        choiceB: "Family",
+        choiceB: "Family", // If you dont get this reference, we cant be friends
         choiceC: "Desktop Originated Material",
         choiceD: "Dominated Oni Masks",
         correctAnswer: "a"
