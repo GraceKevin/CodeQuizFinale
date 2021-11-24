@@ -26,7 +26,7 @@ var buttonD = document.getElementById("d");
 var quizQuestions = [
     {
         question: "Placeholder question?",
-        choiceA: "A",
+        choiceA: "this is a test of your emergency",
         choiceB: "B",
         choiceC: "C",
         choiceD: "D",

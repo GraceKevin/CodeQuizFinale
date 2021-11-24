@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KG Code Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <!-- Start Quiz Container-->
@@ -13,7 +15,7 @@
         <p>Today, we will test our knowledge of overall javascript with a series of questions.</p>
         <p>These questions are designed to solidify one's understanding of javascript as a language</p>
         <p>You will have 100 seconds. Each time you answer incorrectly, you will lose 10 seconds so read through the answers.</p>
-        <button class="start-btn btn" id="start-btn btn" onclick="startQuiz()">Start Quiz</button>
+        <button id="start-btn" onclick="startQuiz()">Start</button>
      </div>
  
      <!-- Quiz Container -->
@@ -28,15 +30,17 @@
 
          <section>
          <div class="questions" id="questions"></div>
-         <div class="answer-options" id="answer-options">
+         <p id="question-text"></p>
+
+         <div class="answer-options">
 
              <!-- Answers from Javascript -->
-             <button id="a btn" onclick="checkAnswer('a')">A</button>
-             <button id="b btn" onclick="checkAnswer('b')">B</button>
-             <button id="c btn" onclick="checkAnswer('c')">C</button>
-             <button id="d btn" onclick="checkAnswer('d')">D</button>
+             <button id="a" onclick="checkAnswer('a')">A</button>
+             <button id="b" onclick="checkAnswer('b')">B</button>
+             <button id="c" onclick="checkAnswer('c')">C</button>
+             <button id="d" onclick="checkAnswer('d')">D</button>
          </div>
-         <div id="answer-result" class="answer-result"></div>
+         <div id="answer-result"></div>
          </section>
 
          <!--<div>
@@ -48,7 +52,7 @@
      <!-- Quiz results box -->
 
      <div id="results-box" class="results-box">
-        <div id="completed" class="completed">You have survived to the end.</div>
+        <div id="completed">You have survived to the end.</div>
         <div id="score" class="score">
 
             <!-- insert score result from Javascript -->
@@ -58,10 +62,10 @@
         <div id="name" class="name">
             Save Your Name or Initials Here
             <input name="username" id="username" class="username" type="text">
-            <button id="saveScore btn">Save Score</button>
+            <button id="saveScore">Save</button>
         </div>
         <div id="buttons" class="buttons">
-            <button id="restart btn" class="restart btn">Restart</button>
+            <button id="restart" class="restart">Restart</button>
     <!--<button class="quit" id="quit">Exit</button> -->
 
         </div>

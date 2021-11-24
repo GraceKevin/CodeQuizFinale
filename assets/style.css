@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.start-page,
+.quiz-start,
+.results-box {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    text-align: center;
+}
+
+.start-page h2 {
+    padding-bottom: 15px;;
+}
+
+.start-page p {
+    margin-bottom: 5px;
+}
+
+/* Start of QUIZ CSS */
+
+.answer-options button {
+    display: inline-block;
+    width: 75px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+.questions p {
+    margin-bottom: 15px;
+}
+
+.timer {
+    text-align: left;
+    margin: 10px 0 0 10px
+}
