@@ -12,6 +12,11 @@ nswer questions in order to get the highest score.
   * You can see more of my work by searching my username: GraceKevin
   * Or by accessing my Github [here](https://github.com/GraceKevin)
   # License
+  
+  ![KGStart](https://user-images.githubusercontent.com/83180774/143169365-c9946cba-246c-4116-bf8e-78caec67e0e3.png)
+  ![KGQuestions](https://user-images.githubusercontent.com/83180774/143169364-4cd51f0d-7053-47b0-bdc9-3e3c763d7359.png)
+  ![KGEnd](https://user-images.githubusercontent.com/83180774/143169362-2ddb925a-8c40-418d-a813-4be14905ca15.png)
+
 
    
   MIT License
