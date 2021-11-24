@@ -10,7 +10,7 @@ var resultBox = document.getElementById("results-box");
 var finalScore = document.getElementById("score");
 var questionText = document.getElementById("question-text");
 var saveScore = document.getElementById("saveScore");
-var username = document.getElementById("username")
+var userName = document.getElementById("username")
 
 // Buttons
 var startBtn = document.getElementById("start-btn");
@@ -26,6 +26,14 @@ var buttonD = document.getElementById("d");
 var quizQuestions = [
     {
         question: "Placeholder question?",
+        choiceA: "A",
+        choiceB: "B",
+        choiceC: "C",
+        choiceD: "D",
+        correctAnswer: "c"
+    },
+    {
+        question: "Duplicate question?",
         choiceA: "A",
         choiceB: "B",
         choiceC: "C",
@@ -112,13 +120,13 @@ function showScore() {
 // Save user input and score
 saveScore.addEventListener("click", function highscore(){
 
-    if(username.value === "") {
-        alert("Please insert your name to save your score!");
+    if(userName.value === "") {
+        alert("Please insert your name to save your score.");
         return false;
     }
     else{
         var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
-        var currentUser = username.value;
+        var currentUser = userName.value;
         var currentHighscore = {
             // adjust handling
             currentUser,
@@ -132,21 +140,21 @@ saveScore.addEventListener("click", function highscore(){
 }); 
 
 function generateHighscores(){
-    username.innerHTML = "";
+    userName.innerHTML = "";
     // KG Enterprises
     finalScore.innerHTML = "";
     var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
     for (i=0; i<highscores.length; i++){
         var newNameSpan = document.createElement("li");
-        var newScoreSpan = document.createElement("li");
-        newNameSpan.textContent = highscores[i].name;
-        newScoreSpan.textContent = highscores[i].score;
-        username.appendChild(newNameSpan);
-        finalScore.appendChild(newScoreSpan);
+        // var newScoreSpan = document.createElement("li");
+        newNameSpan.textContent = highscores[i].currentUser + highscores[i].score;
+
+        finalScore.appendChild(newNameSpan);
     }
 }
 
 // Resets quiz and local storage if user plays again
+
 buttonRestart.addEventListener("click", function playAgain() {
     startQuizDiv.style.display = "block";
     quizBody.style.display = "none";
