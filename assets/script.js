@@ -9,6 +9,8 @@ var answerResult = document.getElementById("answer-result");
 var resultBox = document.getElementById("results-box");
 var finalScore = document.getElementById("score");
 var questionText = document.getElementById("question-text");
+var saveScore = document.getElementById("saveScore");
+var username = document.getElementById("username")
 
 // Buttons
 var startBtn = document.getElementById("start-btn");
@@ -106,3 +108,51 @@ function showScore() {
     clearInterval(timerInterval);
     finalScore.innerHTML = "Final Score: " + score;
 }
+
+// Save user input and score
+saveScore.addEventListener("click", function highscore(){
+
+    if(username.value === "") {
+        alert("Please insert your name to save your score!");
+        return false;
+    }else{
+        var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+        var currentUser = username.value.trim();
+        var currentHighscore = {
+            name: currentUser,
+            score: score
+        };
+        // console.log("is this thing on");
+        savedHighscores.push(currentHighscore);
+        localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
+        generateHighscores();
+    }
+}); 
+
+function generateHighscores(){
+    username.innerHTML = "";
+    // KG Enterprises
+    finalScore.innerHTML = "";
+    var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+    for (i=0; i<highscores.length; i++){
+        var newNameSpan = document.createElement("li");
+        var newScoreSpan = document.createElement("li");
+        newNameSpan.textContent = highscores[i].name;
+        newScoreSpan.textContent = highscores[i].score;
+        username.appendChild(newNameSpan);
+        finalScore.appendChild(newScoreSpan);
+    }
+}
+
+// Resets quiz and local storage if user plays again
+buttonRestart.addEventListener("click", function playAgain() {
+    startQuizDiv.style.display = "block";
+    quizBody.style.display = "none";
+    resultBox.style.display = "none";
+    timeLeft= 100;
+    score = 0;
+    currentQuestionIndex = 0;
+    window.localStorage.clear();
+}); 
+
+// console.log("is there nothing else!?");
