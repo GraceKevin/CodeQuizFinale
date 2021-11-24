@@ -17,21 +17,24 @@
      <div class="quiz-start" id="quiz-start">
          <header>
              <div class="timer" id="timer">
-                 <div id="timer-text" class="timer-text">Remaining Time</div>
-                 <div id="timer-sec" class="timer-sec"></div>
+                 <div id="timer-text" class="timer-text"> Time: </div>
              </div>
          </header>
          <section>
          <div class="questions" id="questions">
 
              <!-- Questions space from Javascript -->
+            <p>Questions</p>
 
          </div>
-         <div class="answers" id="answers">
-
+         <div class="answer-options" id="answer-options">
              <!-- Answers from Javascript -->
-
+             <button id="a" onclick="checkAnswer('a')">A</button>
+             <button id="b" onclick="checkAnswer('b')">B</button>
+             <button id="c" onclick="checkAnswer('c')">C</button>
+             <button id="d" onclick="checkAnswer('d')">D</button>
          </div>
+         <div id="answer-result" class="answer-result"></div>
          </section>
          <div>
              <div class="question-count" id="question-count">
@@ -50,7 +53,7 @@
          <div class="score" id="score">
 
              <!-- insert score result from Javascript -->
-             
+
          </div>
          <div class="buttons" id="buttons">
              <button class="restart" id="restart">Restart</button>
