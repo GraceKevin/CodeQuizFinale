@@ -82,17 +82,27 @@ function generateQuizQuestions() {
 // Check user responses 
 function checkAnswer(answer) {
     correct = quizQuestions[currentQuestionIndex].correctAnswer;
+    // If Correct
         if (answer === correct && currentQuestionIndex !== finalQuestionIndex) {
-            score++;
-            alert('Correct!'); 
+            score += 10;
+            alert('Correct'); 
             currentQuestionIndex++;
             generateQuizQuestions();
         }
+        // If Incorrect
         else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex) {
-            alert('Incorrect!')
+            alert('Incorrect')
             timeLeft -= 10;
             currentQuestionIndex++;
             generateQuizQuestions();
         }
-
 } 
+
+function showScore() {
+    startQuizDiv.style.display = "none";
+    quizBody.style.display = "none";
+    resultBox.style.display = "block";
+    // clear timer and display final score
+    clearInterval(timerInterval);
+    finalScore.innerHTML = "Final Score: " + score;
+}
