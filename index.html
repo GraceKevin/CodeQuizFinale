@@ -7,61 +7,66 @@
     <title>KG Code Quiz</title>
 </head>
 <body>
+    <!-- Start Quiz Container-->
     <div id="start-page" class="start-page">
-        <h2>This quiz will test your coding knowledge!</h2>
-        <button>Start Quiz</button>
+        <h2>Welcome to KG's coding quiz.</h2>
+        <p>Today, we will test our knowledge of overall javascript with a series of questions.</p>
+        <p>These questions are designed to solidify one's understanding of javascript as a language</p>
+        <p>You will have 100 seconds. Each time you answer incorrectly, you will lose 10 seconds so read through the answers.</p>
+        <button class="start-btn btn" id="start-btn btn" onclick="startQuiz()">Start Quiz</button>
      </div>
  
      <!-- Quiz Container -->
 
      <div class="quiz-start" id="quiz-start">
+
          <header>
              <div class="timer" id="timer">
                  <div id="timer-text" class="timer-text"> Time: </div>
              </div>
          </header>
+
          <section>
-         <div class="questions" id="questions">
-
-             <!-- Questions space from Javascript -->
-            <p>Questions</p>
-
-         </div>
+         <div class="questions" id="questions"></div>
          <div class="answer-options" id="answer-options">
+
              <!-- Answers from Javascript -->
-             <button id="a" onclick="checkAnswer('a')">A</button>
-             <button id="b" onclick="checkAnswer('b')">B</button>
-             <button id="c" onclick="checkAnswer('c')">C</button>
-             <button id="d" onclick="checkAnswer('d')">D</button>
+             <button id="a btn" onclick="checkAnswer('a')">A</button>
+             <button id="b btn" onclick="checkAnswer('b')">B</button>
+             <button id="c btn" onclick="checkAnswer('c')">C</button>
+             <button id="d btn" onclick="checkAnswer('d')">D</button>
          </div>
          <div id="answer-result" class="answer-result"></div>
          </section>
-         <div>
-             <div class="question-count" id="question-count">
 
-             <!-- insert question count from Javascript -->
-
-             </div>
+         <!--<div>
              <button id="next-btn btn" class="next-btn btn">Next</button>
-            </div>
+            </div>-->
+
      </div>
  
      <!-- Quiz results box -->
 
-     <div class="results-box" id="results-box">
-         <div class="completed" id="completed"> Completed</div>
-         <div class="score" id="score">
+     <div id="results-box" class="results-box">
+        <div id="completed" class="completed">You have survived to the end.</div>
+        <div id="score" class="score">
 
-             <!-- insert score result from Javascript -->
-            <div id="name" class="name">
-                Please insert your name.
-            </div>
-         </div>
-         <div class="buttons" id="buttons">
-             <button class="restart" id="restart">Restart</button>
-             <!--<button class="quit" id="quit">Exit</button> -->
-         </div>
-     </div>
+            <!-- insert score result from Javascript -->
+
+        </div>
+
+        <div id="name" class="name">
+            Insert your name to save your score!
+            <input name="username" id="username" class="username" type="text">
+            <button id="saveScore">Save Score</button>
+        </div>
+        <div id="buttons" class="buttons">
+            <button id="restart" class="restart">Restart</button>
+    <!--<button class="quit" id="quit">Exit</button> -->
+
+        </div>
+    </div>
+
  
      <script src="./assets/script.js"></script>
 </body>
