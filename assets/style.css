@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: white;
+    background-color: lightgray;
 }
 
 .start-page,
@@ -30,16 +30,37 @@ body {
 
 .answer-options button {
     display: inline-block;
-    width: 75px;
+    width: 100px;
     margin-right: 5px;
     margin-bottom: 15px;
 }
 
 .questions p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .timer {
     text-align: left;
-    margin: 10px 0 0 10px
+    margin-bottom: 10px;
+}
+
+.score {
+    margin-bottom: 20px;
+}
+
+.name {
+    margin-bottom: 20px;
+}
+
+.restart {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.quit {
+    padding: 5px;;
+}
+
+.score li {
+    list-style: none;
 }
